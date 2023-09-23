@@ -2,11 +2,7 @@ import React from 'react';
 
 const Title = (props) => {
 	return (
-		<div
-			style={{
-				marginBottom: '32px', // Added this line
-			}}
-		>
+		<div>
 			<div
 				style={{
 					color: '#2B2D36',
