@@ -1,6 +1,10 @@
 import { useState } from 'react';
 
 import { Button, Modal } from '@goorm-dev/gds-challenge';
+import Modal1 from "@/components/Modal/Info/Modal1";
+import Modal2 from "@/components/Modal/Modal2";
+import Form3 from "@/components/Modal/Form3";
+import Form4 from "@/components/Modal/Form4";
 
 const CustomModal = ({ isOpen, toggle }) => {
 	const [page, setPage] = useState(1);
@@ -27,10 +31,17 @@ const CustomModal = ({ isOpen, toggle }) => {
 					gap: '32px',
 				}}
 			>
-				<Modal.Header toggle={toggle}></Modal.Header>
-				<Modal.Body>컨텐츠를 넣어주세요.</Modal.Body>
+				<Modal.Header toggle={toggle} />
+				<Modal.Body>
+					<Modal1 />
+					<Modal2 />
+					<Form3 />
+					<Form4 />
+				</Modal.Body>
 				<Modal.Footer>
-					<Button>다음</Button>
+					<Button color="link" onClick={prevPage}>이전</Button>
+					<Button onClick={nextPage}>다음</Button>
+					<Button style={{display: `${page === 4 ? 'block' : 'none'}`}}> 제출하기</Button>
 				</Modal.Footer>
 			</Modal>
 		</>
