@@ -1,6 +1,18 @@
+import { useState } from 'react';
+
 import { Button, Modal } from '@goorm-dev/gds-challenge';
 
 const CustomModal = ({ isOpen, toggle }) => {
+	const [page, setPage] = useState(1);
+
+	const nextPage = () => {
+		setPage(page + 1);
+	};
+
+	const prevPage = () => {
+		setPage(page - 1);
+	};
+
 	return (
 		<>
 			<Button size="lg" onClick={toggle}>
