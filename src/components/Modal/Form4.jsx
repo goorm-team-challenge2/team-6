@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Title from './Title';
 
-const Form4 = ({ isOpen, toggle }) => {
+const Form4 = ({ page }) => {
 	const [inputValue, setInputValue] = useState('');
 
 	const handleInputChange = (event) => {
@@ -9,7 +9,7 @@ const Form4 = ({ isOpen, toggle }) => {
 	};
 
 	return (
-		<div className="content">
+		<div className="content" style={{ display: `${page === 4 ? 'block' : 'none'}` }}>
 			<Title
 				title={[
 					'구름톤 챌린지에',

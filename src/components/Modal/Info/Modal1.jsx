@@ -4,7 +4,7 @@ import Agree from '@/components/Modal/Info/Agree';
 import Info from '@/components/Modal/Info/Info';
 import Title from "@/components/Modal/Title";
 
-const Modal1 = () => {
+const Modal1 = ({ page }) => {
 	const [name, setName] = useState('');
 	const [phoneNumber, setPhoneNumber] = useState('');
 	const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ const Modal1 = () => {
 	const [adSms, setAdSms] = useState(false);
 
 	return (
-		<>
+		<div style={{ display: `${page === 1 ? 'block' : 'none'}` }}>
 			<Title
 				title="참여자 정보를 입력해주세요."
 				subTitle="오프라인 팀 챌린지 참여자의 정보를 수집하려고 해요."
@@ -43,7 +43,7 @@ const Modal1 = () => {
 				setAdEmail={setAdEmail}
 				setAdSms={setAdSms}
 			/>
-		</>
+		</div>
 	);
 };
 

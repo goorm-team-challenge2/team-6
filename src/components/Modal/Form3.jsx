@@ -4,7 +4,7 @@ import Title from './Title';
 import { Input } from '@goorm-dev/gds-challenge';
 import Form3Btn from './Form3Btn';
 
-const Form3 = () => {
+const Form3 = ({page}) => {
 	const [selectedButton, setSelectedButton] = useState(null);
 
 	const handleClick = (value) => {
@@ -12,7 +12,7 @@ const Form3 = () => {
 	};
 
 	return (
-		<div>
+		<div style={{ display: `${page === 3 ? 'block' : 'none'}` }}>
 			<Title
 				title={[
 					'오프라인 팀 챌린지에',
