@@ -6,7 +6,7 @@ import styles from './Header.module.scss';
 import CustomModal from "@/components/Modal/CustomModal";
 import {useState} from "react";
 
-const Header = () => {
+const Header = ({formResults, setFormResults}) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggle = () => {
@@ -19,7 +19,7 @@ const Header = () => {
 				<Typography token="h5">
 					구름톤 챌린지 참여자 정보 수집
 				</Typography>
-				<CustomModal isOpen={isOpen} toggle={toggle} />
+				<CustomModal isOpen={isOpen} setIsOpen={setIsOpen} toggle={toggle} formResults={formResults} setFormResults={setFormResults}/>
 			</div>
 		</header>
 	);

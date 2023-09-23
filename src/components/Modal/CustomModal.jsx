@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 
 import Form3 from '@/components/Modal/Form3';
 import Form4 from '@/components/Modal/Form4';
@@ -7,7 +7,7 @@ import Modal2 from '@/components/Modal/Modal2';
 
 import { Button, Modal } from '@goorm-dev/gds-challenge';
 
-const CustomModal = ({ isOpen, toggle }) => {
+const CustomModal = ({ isOpen, toggle, setIsOpen,formResults, setFormResults }) => {
 	const [page, setPage] = useState(1);
 
 	const nextPage = () => {
@@ -17,6 +17,12 @@ const CustomModal = ({ isOpen, toggle }) => {
 	const prevPage = () => {
 		setPage(page - 1);
 	};
+
+	useEffect(() => {
+		if (page === 4) {
+			setFormResults([1]);
+		}
+	})
 
 	return (
 		<>
