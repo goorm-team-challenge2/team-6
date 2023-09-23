@@ -15,7 +15,7 @@ const CustomModal = ({ isOpen, toggle }) => {
 					gap: '32px',
 				}}
 			>
-				<Modal.Header toggle={toggle}>헤더</Modal.Header>
+				<Modal.Header toggle={toggle}></Modal.Header>
 				<Modal.Body>컨텐츠를 넣어주세요.</Modal.Body>
 				<Modal.Footer>
 					<Button>다음</Button>
