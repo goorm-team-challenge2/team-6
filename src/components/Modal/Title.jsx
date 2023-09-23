@@ -14,7 +14,7 @@ const Title = (props) => {
 					fontWeight: '700',
 					lineHeight: '30px',
 					wordWrap: 'break-word',
-					marginBottom: '5px',
+					marginBottom: '8px',
 				}}
 			>
 				{props.title}
